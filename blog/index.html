@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+    <script>
+
+        
+    </script>
+</head>
+<body oncontextmenu = "return false">
+    <!-- 导航 -->
+    <div class="nav">
+         <div class="nav_left"></div>
+         <div class="nav_center"><ul>
+             <li><a href="#" class="active">首页</a></li>
+             <li><a href="#">个人随笔</a></li>
+             <li><a href="#">技术笔记</a></li>
+             <li><a href="#">对我留言</a></li>
+             <li><a href="#">关于我</a></li>
+             <li><a href="#">关于我</a></li>
+             <li><a href="#">关于我</a></li>
+         </ul>
+        </div>
+         <div class="nav_right">1</div>
+    </div>
+    <!-- 导航结束 -->
+   <!-- logo -->
+   <div class="logo">
+          <h2>记录日常以及学习生活  <br>__________</h2>
+          
+   </div>
+    <!-- 正文开始 -->
+    <div class="frame">
+         <div class="frame_left" id="div1">
+            <div class="frame_left_h"> <h2> 首页</h2></div>
+            <div>asd</div>
+            <div>sad</div>
+            <div>adsas</div>
+         </div>
+         <div class="frame_content">
+            <div class="frame_content_top">
+                 <div class="frame_content_top_left">
+                   <a href=""><img class="img-slide img1" src="img/1.jpg" alt="1"></a>
+                   <a href=""><img class="img-slide img2" src="img/2.png" alt="1"></a>
+                   <a href=""><img class="img-slide img3" src="img/1.jpg" alt="1"></a>
+                 </div>
+                <div class="frame_content_top_rt">1</div>
+                <div class="frame_content_top_rb">1</div>
+            </div>
+
+         </div>
+         <div class="frame_right"></div>
+    </div>
+
+
+</body>
+</html>
+
+<!-- 不许右键 -->
+<script>
+document.oncontextmenu = function(){
+
+return false;
+
+}
+
+
+// 图片轮播
+var index=0;
+    //改变图片
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,2000);
+   
+
+ 
+</script>
+

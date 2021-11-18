@@ -1,0 +1,203 @@
+body,h1,h2,h3,li,a,ul {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font: 15px/1.5 "Microsoft YaHei",Lato,Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    /* font-size: 22px; */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(245,245,245);
+    margin: 0 auto;
+    padding: 0px;
+    /*background: url(../picture/beijing.jpg) no-repeat;*/
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 9999;
+}
+.nav{
+    /* width: 100%; */
+    height: 50px;
+    background-color: white;
+    margin:0 auto;
+    padding: 0;
+    position: relative;
+    /* 粘性 */
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+/* 导航左边的 */
+.nav_left{
+    width:33.33%;
+    float: left;
+    height: 50px;
+}
+/* 导航中间的 */
+.nav_center{
+    width: 33.33%;
+    float: left;
+    height: 50px;
+
+}
+.nav_center ul{
+list-style-type: none;  /*去除ul前面的点样式*/
+margin:0 auto;
+padding: 0;
+overflow: hidden; /*超出宽和高的元素隐藏*/
+background-color:white;
+text-align: center;
+width:638px;        /*ul一定要加一个宽度否则不居中*/
+display: inline-block;         /*加了行内块元素后不会变成块就是不会堆叠了*/
+}
+.nav_center li{
+   float: left;
+}
+.nav_center a:hover:not(.active){
+    /* 除了active属性没有点击效果 */
+    background-color:rgb(245,245,245); 
+}
+.nav_center a{
+    display: block;  /*让他变为块级元素就能添加宽高等*/
+    padding:13px;    /*四周添加内边距*/
+    color: black;
+}
+.active {
+    background-color: rgb(255,130,0);
+  }
+
+  /* 响应式超过600px 堆叠 */
+  /* 手机 */ /* 放的越大宽度越小 */
+  /*@media screen and (max-width:1270px) {
+     
+    .nav_center li{float: none;
+      display: none;
+    }
+  }*/
+/* 导航右边的 */
+.nav_right{
+    width: 33.33%;
+    float: left;
+    height: 50px;
+}
+
+/* logo*/
+.logo{
+    width: 100%;
+    height: 200px;
+    /* background: url(../img/2.png) no-repeat; */
+    background-color: rgb(29, 167, 218);
+    background-size: 100%;
+    opacity:0.9;
+    overflow: hidden;
+    /* 要添加一个定位元素后 才可以使用堆叠元素 相对于父亲元素 */
+    position: relative;
+    z-index:-1;
+    box-shadow: 10px 10px 50px rgb(29, 167, 218);
+    text-align: center;
+}
+.logo h2{
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    padding:60px;
+}
+
+/* 框架正文开始 */
+.frame{
+    max-width:1122px;
+    height: 1000px;
+    margin: auto;
+    margin-top: 2px;
+}
+/* 框架左边 */
+.frame_left{
+    height: 100%;
+    width: 172px;
+    background-color: white;
+    float: left;
+    /* padding: 20px; */
+    margin-top:5px;
+    border: 1px solid rgb(245,245,245);
+    border-radius: 5px;
+
+}
+
+.frame_left_h{
+    padding:10px 16px;
+    margin: 0 auto;
+}
+.frame_left_h h2{
+    color: rgb(51, 51, 51);
+}
+/* 框架正文 */
+.frame_content{
+    height: 100%;
+    width:670px;
+    margin-top: 2px;
+    float: left;
+    padding:5px;
+}
+.frame_content_top{
+ width: 670px;
+ height:280px;
+ background-color: rgb(51, 51, 51);
+ /* padding: 5px; */
+}
+
+/* ------------------图片轮播-------------------- */
+.frame_content_top_left{
+    float: left;
+    width: 400px;
+    height: 280px;
+    display:block;
+    background-color: rosybrown;
+    /* margin:0; */
+    /* padding:0; */
+}
+.frame_content_top_left img{
+ width: 100%;
+ height: 100%;
+}
+/* 这里轮播要none不然会有bug */
+.img2{
+    display: none;
+}
+.img3{
+    display: none;
+}
+
+.frame_content_top_rt{
+   display: inline-block;
+    width: 270px;
+    height: 140px;
+    /* margin:0; */
+    /* padding: 0; */
+    background-color: royalblue;
+}
+.frame_content_top_rb{
+    float: left;
+     width: 270px;
+     height: 140px;
+     background-color: saddlebrown;
+ }
+ /* 框架右边部分 */
+ .frame_right{
+    height: 100%;
+    width: 255px;
+    background-color: rgb(255,130,0);
+    float: left;
+    padding: 5px;
+}
+
+
+

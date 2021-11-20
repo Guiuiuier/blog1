@@ -1,359 +1,179 @@
-body,
-h1,
-h2,
-h3,
-li,
-a,
-ul {
-	margin: 0px;
-	padding: 0px;
-	text-decoration: none;
-	list-style: none;
-	font: "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif;
-	color: #666666;
-	/* font-size: 22px; */
-}
 
-* {
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word
-}
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-body {
-	background-color: rgb(245, 245, 245);
-	margin: 0 auto;
-	padding: 0px;
-	/*background: url(../picture/beijing.jpg) no-repeat;*/
-	background-position: top center;
-	background-attachment: fixed;
-	background-size: cover;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-	position: relative;
-	z-index: 9999;
-	font: 15px/1.5 "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif;
-}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=unicode" />
+<link rel="stylesheet" href="css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' />
+<link rel="icon" href="img/icon.png" type ="image/x-icon"/>
+<script language="javascript" type="text/javascript" src="js/main.js"> </script>
+<title>立志做一名合格实习生</title>
+<script language="javascript" type="text/javascript">
+    oncontextmenu = "return false"
+</script>
+<script type="text/javascript">
+    
+       document.addEventListener('plusready', function(){
+           //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+           
+       });
+       
+</script>
+</head>
 
-.nav {
-	/* width: 100%; */
-	height: 50px;
-	background-color: white;
-	margin: 0 auto;
-	padding: 0;
-	position: fixed;
-	top: 0;
-	text-align: center;
-	width: 100%;
-	z-index: 2;
-}
+<body>
+<!-- 导航 -->
+<div class="nav">
+    <div class="nav_left"></div>
+    <div class="nav_center">
+        <ul>
+            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#">个人随笔</a></li>
+            <li><a href="#">技术笔记</a></li>
+            <li><a href="#">对我留言</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">关于我</a></li>
+        </ul>
+    </div>
+    <div class="nav_right">1</div>
+</div>
+<!-- 导航结束 -->
+<!-- logo -->
+<div class="logo">
+    <h2>记录日常以及学习生活 <br />__________</h2>
 
-/* 导航左边的 */
-.nav_left {
-	width: 33.33%;
-	float: left;
-	height: 50px;
-}
+</div>
 
-/* 导航中间的 */
-.nav_center {
-	width: 33.33%;
-	float: left;
-	height: 50px;
+<!-- 正文开始 -->
+<div class="frame">
+    <!-- <div class="frame_left" id="div1">
+        <div class="frame_left_h">
+            <h2> 首页</h2>
+        </div>
+        <div>asd</div>
+        <div>sad</div>
+        <div>adsas</div>
+    </div> -->
+    <div class="frame_content">
+        <div class="frame_content_top">
+            <div class="frame_content_top_left" id="frame_content_top_left">
+                <div class="wrap" id='wrap'>
+                    <ul id="pic">
+                        <li><img src="img/1.jpg" alt="1" /></li>
+                        <li> <img src="img/2.png" alt="2" class="img2" /></li>
+                        <li><img src="img/3.jpg" alt="3" class="img3" /></li>
+                    </ul>
+                    <ol id="list">
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                            <!-- <li>4</li>
+                            <li>5</li> -->
+                    </ol>
+                </div>
+            </div>
+            <div class="frame_content_top_rt"><div class="frame_content_top_rt_name"><h3>说点什么</h3></div>
+            <div class="frame_content_top_rt_ct">希望能找个好工作</div>
+        </div>
+            <div class="frame_content_top_rb">S之border边框长度控制 需要边框长度比容器小一些时,用div嵌套,但伪类在实现这个效果时很方便,只需要一个div就够了,另外调整padding和margin都不会很麻烦。 ...</div>
+        </div>
 
-}
+    <div class="frame_content_label">
+    
+        <h2>最新文章</h2>
 
-.nav_center ul {
-	list-style-type: none;
-	/*去除ul前面的点样式*/
-	margin: 0 auto;
-	padding: 0;
-	overflow: hidden;
-	/*超出宽和高的元素隐藏*/
-	background-color: white;
-	text-align: center;
-	width: 638px;
-	/*ul一定要加一个宽度否则不居中*/
-	display: inline-block;
-	/*加了行内块元素后不会变成块就是不会堆叠了*/
-}
+    </div>
+    
+    <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
-.nav_center li {
-	float: left;
-}
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">曹as打算几点哈卡达哈睡大觉asdsad asdasdas稍等哈看似简单哈师大卡死阿斯顿撒打所敖德萨多撒阿斯顿撒多</div>
+        </div>
+    </div>
+    <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
-.nav_center a:hover:not(.active) {
-	/* 除了active属性没有点击效果 */
-	background-color: rgb(245, 245, 245);
-}
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11</div>
+        </div>
+    </div>  <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
-.nav_center a {
-	display: block;
-	/*让他变为块级元素就能添加宽高等*/
-	padding: 13px;
-	/*四周添加内边距*/
-	color: #666666;
-}
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11</div>
+        </div>
+    </div>
 
-.active {
-	background-color: rgb(255, 130, 0);
-}
+    <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11</div>
+        </div>
+    </div>  <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11asdjakdajdlk</div>
+        </div>
+    </div>  <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11</div>
+        </div>
+    </div>  <div class="frame_content_neirong">
+        <div class="frame_content_neirong_img"><img src="img/1.jpg" alt="" class="imggg"></div>
+        <div class="frame_content_neirong_right">
+            <div class="frame_content_neirong_right_head">
+                <h2>asdadaasdsadasdasdas\dasdasd</h2>
 
-
-
-/* 导航右边的 */
-.nav_right {
-	width: 33.33%;
-	float: left;
-	height: 50px;
-}
-
-/* logo*/
-.logo {
-	width: 100%;
-	height: 200px;
-	/* background: url(../img/2.png) no-repeat; */
-	background-color: rgb(29, 167, 218);
-	background-size: 100%;
-	opacity: 0.9;
-	overflow: hidden;
-	/* 要添加一个定位元素后 才可以使用堆叠元素 相对于父亲元素 */
-	position: relative;
-	z-index: 1;
-	box-shadow: 10px 10px 50px rgb(29, 167, 218);
-	text-align: center;
-}
-
-.logo h2 {
-	font-weight: bold;
-	color: white;
-	font-size: 28px;
-	padding: 60px;
-}
-
-/* 框架正文开始 */
-.frame {
-	max-width: 1122px;
-	height: 2200px;
-	margin: 0 auto;
-	margin-top: 2px;
-}
-
-
-.frame_left_h {
-	padding: 10px 16px;
-	margin: 0 auto;
-}
-
-.frame_left_h h2 {
-	color: rgb(51, 51, 51);
-}
-
-/* 框架正文 中间 */
-.frame_content {
-	width: 812px;
-	margin-top: 20px;
-	float: left;
-	padding: 5px;
-	position: relative;
-	z-index: 1;
-}
-
-.frame_content_top {
-	width: 822px;
-	height: 280px;
-}
-
-/* ------------------图片轮播-------------------- */
-.frame_content_top_left {
-	float: left;
-	width: 552px;
-	height: 280px;
-	display: block;
-	background-color: rosybrown;
-	position: relative;
-	overflow: hidden;
-	/* border-radius: 10px; */
-}
-
-/* 规定了图片大小 */
-.wrap img {
-	width: 552px;
-	height: 280px;
-}
-
-
-.frame_content_top_left ul {
-	position: absolute;
-}
-
-.frame_content_top_left ul li {
-	height: 100%;
-	width: 100%;
-}
-
-.frame_content_top_left ol {
-	position: absolute;
-	right: 5px;
-	bottom: 10px;
-}
-
-.frame_content_top_left ol li {
-	height: 20px;
-	width: 20px;
-	background: #ccc;
-	border: solid 1px #666;
-	margin-left: 5px;
-	color: #000;
-	float: left;
-	line-height: center;
-	text-align: center;
-	cursor: pointer;
-}
-
-.frame_content_top_left ol .on {
-	background: #E97305;
-	color: #fff;
-}
+            </div>
+            <div class="frame_content_neirong_right_content">a撒肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯肯德基爱了可视对讲啊老家的垃圾打卡机克拉斯建档立卡就打开拉进来肯德基爱上了肯德基了卡萨丁记录卡升级了空大就是asdsa</div>
+            <div class="frame_content_neirong_right_footer">11</div>
+        </div>
+    </div>
+    </div>
 
 
 
 
+    <div class="frame_right">adsasd
+    </div>
 
 
 
 
+</div>
+</body>
 
-
-
-
-
-
-.frame_content_top_rt {
-	display: inline-block;
-	width: 255px;
-	height: 130px;
-	padding: 5px;
-	/* margin:0; */
-	/* padding: 0; */
-	background-color: white;
-	border-bottom: 1px solid rgb(255, 130, 0);
-	border-radius: 10px;
-	margin-left: 5px;
-	overflow: hidden;
-}
-
-.frame_content_top_rt_name {
-	padding: 10px;
-}
-
-.frame_content_top_rt_ct {
-	padding: 10px;
-	height: 60px;
-	width: 235px;
-	overflow: hidden;
-}
-
-.frame_content_top_rb {
-	float: left;
-	width: 255px;
-	height: 130px;
-	padding: 5px;
-	background-color: white;
-	border-radius: 10px;
-	margin-left: 5px;
-	overflow: hidden;
-}
-
-/* 最新文章 */
-.frame_content_label {
-	padding: 20px 10px 10px 0px;
-	font-size: 14px;
-	border-bottom: 2px solid rgb(255, 130, 0);
-
-}
-
-/* 内容部分 */
-.frame_content_neirong {
-	width: 810px;
-	height: 197px;
-	padding: 20px 0px 20px 0px;
-	border-bottom: 2px solid rgb(191, 171, 134);
-	margin-top: 20px;
-	background-color: rgb(245, 245, 245);
-}
-
-.frame_content_neirong:hover {
-	box-shadow: 5px 5px 55px rgb(191, 171, 134);
-}
-
-.frame_content_neirong_img:hover {
-	/* 选择改变的地方 */
-	transition-property: all;
-	/* 持续时间 */
-	transition-duration: 2s;
-	/* 改变速度 */
-	transition-timing-function: linear;
-}
-
-/* 内容图片 */
-.frame_content_neirong_img img {
-	width: 220px;
-	height: 190px;
-	float: left;
-	overflow: hidden;
-}
-
-/* 内容 */
-.frame_content_neirong_right_head {
-	float: left;
-	margin-left: 20px;
-	width: 570px;
-	border-bottom: 2px solid rgb(191, 171, 134);
-	overflow: hidden;
-	height: 34px;
-	margin-bottom: 10px;
-}
-
-.frame_content_neirong_right_content {
-	width: 570px;
-	height: 85px;
-	float: left;
-	padding-left: 20px;
-	overflow: hidden;
-	font-size: 18px;
-}
-
-.frame_content_neirong_right_footer {
-	width: 570px;
-	height: 40px;
-	float: left;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
-
-/* 框架右边部分 */
-.frame_right {
-	height: 650px;
-	width: 255px;
-	background-color: white;
-	float: left;
-	padding: 10px;
-	position: sticky;
-	top: 50px;
-	margin-top: 25px;
-	border: 0px solid rgb(245, 245, 245);
-	border-radius: 5px;
-	margin-left: 20px;
-}
-
-/* 适配小米10s及一下 */
-@media screen and (min-width:360px) and (max-width:780px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
-/* 适配部分/iphone12手机及以下*/
-@media screen and (min-width:390px) and (max-width:844px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
-/* 适配iphone5/SE 及以下*/
-@media screen and (min-width:320px) and (max-width:568px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
+</html>

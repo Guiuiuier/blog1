@@ -137,7 +137,7 @@ body {
 /* 框架正文开始 */
 .frame {
 	max-width: 1122px;
-	height:2200px;
+	height: 2200px;
 	margin: 0 auto;
 	margin-top: 2px;
 }
@@ -165,8 +165,6 @@ body {
 .frame_content_top {
 	width: 822px;
 	height: 280px;
-	/* background-color: rgb(51, 51, 51); */
-	/* padding: 5px; */
 }
 
 /* ------------------图片轮播-------------------- */
@@ -187,13 +185,6 @@ body {
 	height: 280px;
 }
 
-/* 这里轮播要none不然会有bug */
-/* .img2{
-    display: none;
-}
-.img3{
-    display: none;
-} */
 
 .frame_content_top_left ul {
 	position: absolute;
@@ -360,96 +351,9 @@ body {
 	margin-left: 20px;
 }
 
-
-/* 响应式超过600px 堆叠 */
-/* 手机 */
-/* 放的越大宽度越小 */
-@media screen and (min-width:300px) and (max-width:1024px) {
-	.nav {
-		display: none;
-	}
-
-	.nav_center li {
-		float: none;
-		display: none;
-	}
-
-	.frame_right {
-		display: none;
-	}
-
-	.frame_content_top {
-		display: none;
-	}
-
-	.frame_content_label {
-		width: 300px;
-	}
-
-	.frame {
-		width: 300px;
-		height: auto;
-	}
-
-	.frame_right {
-		display: none;
-	}
-
-	.frame_content_neirong {
-		width: 300px;
-		height: 160px;
-		padding: 5px 0 5px 0;
-		margin-top: 10px;
-		margin-bottom: 5px;
-	}
-
-	.frame_content {
-		width: 300px;
-		padding: 0;
-		margin: 0 auto;
-		overflow: hidden;
-	}
-
-	.frame_content_neirong_img img {
-		width: 120px;
-		height: 110px;
-	}
-
-	.frame_content_neirong_img {
-		padding-top: 15px;
-		width: 120px;
-		height: 110px;
-		float: left;
-	}
-
-	.frame_content_neirong_right_content {
-		width: 350px;
-		font-size: 9px;
-	}
-
-	.frame_content_neirong_right_head {
-		float: left;
-		width: 160px;
-		border-bottom: 2px solid rgb(191, 171, 134);
-		overflow: hidden;
-	}
-
-	.frame_content_neirong_right_content {
-		width: 160px;
-		height: 82px;
-		float: left;
-		overflow: hidden;
-		font-size: 14px;
-	}
-
-	.frame_content_neirong_right_footer {
-		width: 300px;
-		height: 20px;
-		float: left;
-		padding-left: 0px;
-		padding-top: 10px;
-		padding-bottom: 0px;
-		padding-right: 0px;
-		overflow: hidden;
-	}
-}
+/* 适配小米10s及一下 */
+@media screen and (min-width:360px) and (max-width:780px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
+/* 适配部分/iphone12手机及以下*/
+@media screen and (min-width:390px) and (max-width:844px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
+/* 适配iphone5/SE 及以下*/
+@media screen and (min-width:320px) and (max-width:568px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{width:120px;height:110px}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid #bfab86;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}

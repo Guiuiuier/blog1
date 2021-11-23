@@ -1,223 +1,91 @@
-body,
-h1,
-h2,
-h3,
-li,
-a,
-ul {
-	margin: 0px;
-	padding: 0px;
-	text-decoration: none;
-	list-style: none;
-	font: "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif;
-	color: #666666;
-	/* font-size: 22px; */
+body,h1,h2,h3,li,a,ul{margin:0px;padding:0px;text-decoration:none;list-style:none;color:#666666}
+*{margin:0;padding:0;word-wrap:break-word}
+
+/* font: "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif; */
+body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-position:top center;background-attachment:fixed;background-size:cover;-webkit-background-size:100% 100%;background-size:100% 100%;position:relative;z-index:9999;font:15px/1.5}
+.nav{height:50px;background-color:white;margin:0 auto;padding:0;position:fixed;top:0;text-align:center;width:100%;z-index:2}
+.nav_left{width:20%;float:left;height:50px}
+.nav_center{width:60%;float:left;height:50px}
+.nav_center ul{list-style-type:none;margin:0 auto;padding:0;overflow:hidden;background-color:white;text-align:center;max-width:1122px;display:inline-block}
+.nav_center li{float:left}
+.nav_center a:hover:not(.active){background-color:rgb(245,245,245)}
+.nav_center a{display:block;padding:13px;color:#666666}
+.active1{background-color:rgb(255,130,0)}
+.nav_right{width:20%;float:left;height:50px}
+.logo{width:100%;height:200px;background-color:rgb(29,167,218);background-size:100%;opacity:0.9;overflow:hidden;position:relative;z-index:1;box-shadow:10px 10px 50px rgb(29,167,218);text-align:center}
+.logo h2{font-weight:bold;color:white;font-size:28px;padding:60px}
+.frame{max-width:1122px;height:2200px;margin:0 auto;margin-top:2px}
+.frame_left_h{padding:10px 16px;margin:0 auto}
+.frame_left_h h2{color:rgb(51,51,51)}
+.frame_content{width:822px;margin-top:20px;float:left;width:relative;z-index:1}
+.frame_content_top{max-width:820px;height:280px}
+.slide{max-width:540px;max-height:280px}
+.carousel-inner{max-width:100%;height:auto}
+.item{max-width:100%;height:280px}
+.item img{max-width:100%;height:auto}
+.frame_content_top_left{float:left;width:552px;height:280px}
+/* ------------------js图片轮播-------------------- */
+/* .frame_content_top_left{float:left;width:552px;height:280px;display:block;background-color:rosybrown;position:relative;overflow:hidden}
+ .wrap img{max-width:552px;height:auto}
+.frame_content_top_left ul{position:absolute}
+.frame_content_top_left ul li{height:100%;width:100%}
+.frame_content_top_left ol{position:absolute;right:5px;bottom:10px}
+.frame_content_top_left ol li{height:20px;width:20px;background:#ccc;border:solid 1px #666;margin-left:5px;color:#000;float:left;line-height:center;text-align:center;cursor:pointer}
+.frame_content_top_left ol .on{background:#E97305;color:#fff}
+ */
+
+ .frame_content_top_rt{display:inline-block;width:255px;height:130px;padding:5px;background-color:white;border-bottom:1px solid rgb(255,130,0);border-radius:10px;margin-left:5px;overflow:hidden}
+ .frame_content_top_rt_name{padding:10px}
+ .frame_content_top_rt_ct{padding:10px;height:60px;width:235px;overflow:hidden}
+ .frame_content_top_rb{float:left;width:255px;height:130px;padding:5px;background-color:white;border-radius:10px;margin-left:5px;overflow:hidden}
+ .frame_content_label{padding:20px 10px 10px 0px;font-size:14px;border-bottom:2px solid rgb(255,130,0)}
+ .frame_content_neirong{width:810px;height:197px;padding:20px 0px 20px 0px;border-bottom:2px solid rgb(235,235,235);margin-top:20px;background-color:rgb(245,245,245)}
+ .frame_content_neirong:hover{box-shadow:0px 0px 2px rgb(191,171,134)}
+ .frame_content_neirong_img:hover{transition-property:all;transition-duration:2s;transition-timing-function:linear}
+ .frame_content_neirong_img{width:220px;max-height:190px;float:left;overflow:hidden}
+ .frame_content_neirong_img video{width:100%;height:auto;padding-top:40px;padding-bottom:30px}
+ .frame_content_neirong_img img{max-width:100%;height:auto;padding-top:20px;padding-bottom:20px;float:left;overflow:hidden}
+ .frame_content_neirong_right_head{float:left;margin-left:20px;width:570px;border-bottom:2px solid rgb(191,171,134);overflow:hidden;height:34px;margin-bottom:10px}
+ .frame_content_neirong_right_content{width:570px;height:85px;float:left;padding-left:20px;overflow:hidden;font-size:18px}
+ .frame_content_neirong_right_footer{width:570px;height:40px;float:left;padding-left:20px;padding-top:20px;padding-bottom:10px}
+ .frame_right{height:650px;width:280px;background-color:white;float:left;padding:10px;position:sticky;top:50px;margin-top:25px;border:0px solid rgb(245,245,245);border-radius:5px;margin-left:20px}
+ .frame_right_update{width:255px;height:100%;overflow:hidden;padding:2px}
+ .frame_right_update_top{width:255px;height:650px;overflow:hidden}
+ .frame_right_update_title{height:40px;width:255px;overflow:hidden;border-bottom:1px solid rgb(245,245,245)}
+ .frame_right_update_title_left{width:127px;overflow:hidden;float:left;padding-top:8px;padding-bottom:8px}
+ .frame_right_update_title_right{width:127px;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
+ .frame_right_update_content{width:auto;overflow:hidden;border-bottom:1px solid rgb(245,245,245);float:left}
+ .frame_right_update_content_left{width:220px;overflow:hidden;text-align:left;padding-top:8px;padding-bottom:8px;float:left}
+ .frame_right_update_content_right{width:auto;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
+ .frame_right_update_content_right_right{width:auto;font-size:15px;overflow:hidden;border-radius:0px;color:rgb(255,255,255)}
+ .color1{background-color:rgb(255,56,82)}
+ .color2{background-color:rgb(255,130,0)}
+ .color{background-color:rgb(51,175,221)}
+ .frame_content_video_neirong{width:auto;height:auto;padding:10px 0 10px 0;margin-top:10px;margin-bottom:5px;border:2px solid rgb(235,235,235);background-color:rgb(255,255,255);border-radius:10px}
+ .frame_content_video_neirong_title{max-width:812px;height:auto;padding:10px;padding-left:10px;padding-bottom:10px}
+ .frame_content_video_neirong_title_touxiang{width:70px;height:60px;float:left}
+ .frame_content_video_neirong_title_name{height:40px;max-width:742px;padding-left:70px;font-size:1.0em}
+ .frame_content_video_neirong_title_content{padding-left:90px;height:auto;max-width:742px;font-size:1.0em}
+ .frame_content_video_neirong_shipin{max-width:710px;max-height:auto;margin:0 auto;/*padding-left:65px;padding-top:10px*/}
+ .frame_content_video_neirong_shipin video{max-width:100%;height:auto}
+ .frame_content_video_neirong_bottom{max-width:812px;height:auto;padding-right:5.6rem;padding-left:85px}
+ .dropdown-toggle{background-color: white;width: 100%;}
+
+ .icon{
+display: inline-block;
+padding-top:5px;
 }
-
-* {
-	margin: 0;
-	padding: 0;
-	word-wrap: break-word
-}
-
-body {
-	background-color: rgb(245, 245, 245);
-	margin: 0 auto;
-	padding: 0px;
-	/*background: url(../picture/beijing.jpg) no-repeat;*/
-	background-position: top center;
-	background-attachment: fixed;
-	background-size: cover;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-	position: relative;
-	z-index: 9999;
-	font: 15px/1.5 "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif;
-}
-
-.nav {
-	/* width: 100%; */
-	height: 50px;
-	background-color: white;
-	margin: 0 auto;
-	padding: 0;
-	position: fixed;
-	top: 0;
-	text-align: center;
-	width: 100%;
-	z-index: 2;
-}
-
-/* 导航左边的 */
-.nav_left {
-	width: 33.33%;
-	float: left;
-	height: 50px;
-}
-
-/* 导航中间的 */
-.nav_center {
-	width: 33.33%;
-	float: left;
-	height: 50px;
-
-}
-
-.nav_center ul {
-	list-style-type: none;
-	/*去除ul前面的点样式*/
-	margin: 0 auto;
-	padding: 0;
-	overflow: hidden;
-	/*超出宽和高的元素隐藏*/
-	background-color: white;
-	text-align: center;
-	width: 638px;
-	/*ul一定要加一个宽度否则不居中*/
-	display: inline-block;
-	/*加了行内块元素后不会变成块就是不会堆叠了*/
-}
-
-.nav_center li {
-	float: left;
-}
-
-.nav_center a:hover:not(.active) {
-	/* 除了active属性没有点击效果 */
-	background-color: rgb(245, 245, 245);
-}
-
-.nav_center a {
-	display: block;
-	/*让他变为块级元素就能添加宽高等*/
-	padding: 13px;
-	/*四周添加内边距*/
-	color: #666666;
-}
-
-.active {
-	background-color: rgb(255, 130, 0);
-}
-
-
-
-
-
-
-/* 导航右边的 */
-.nav_right {
-	width: 33.33%;
-	float: left;
-	height: 50px;
-}
-
-/* logo*/
-.logo {
-	width: 100%;
-	height: 200px;
-	/* background: url(../img/2.png) no-repeat; */
-	background-color: rgb(29, 167, 218);
-	background-size: 100%;
-	opacity: 0.9;
-	overflow: hidden;
-	/* 要添加一个定位元素后 才可以使用堆叠元素 相对于父亲元素 */
-	position: relative;
-	z-index: 1;
-	box-shadow: 10px 10px 50px rgb(29, 167, 218);
-	text-align: center;
-}
-
-.logo h2 {
-	font-weight: bold;
+ .dropdown{
+	border-left: 2px solid rgb(245,245,245); 
+	border-right: 2px solid rgb(245,245,245); 
+ }
+.footer{
+	background-color: black;
 	color: white;
-	font-size: 28px;
-	padding: 60px;
-}
-
-/* 框架正文开始 */
-.frame {
-	max-width: 1122px;
-	height: 2200px;
-	margin: 0 auto;
-	margin-top: 2px;
-}
-
-
-.frame_left_h {
-	padding: 10px 16px;
-	margin: 0 auto;
-}
-
-.frame_left_h h2 {
-	color: rgb(51, 51, 51);
-}
-
-/* 框架正文 中间 */
-.frame_content {
-	width: 812px;
-	margin-top: 20px;
-	float: left;
-	padding: 5px;
-	position: relative;
-	z-index: 1;
-}
-
-.frame_content_top {
-	width: 822px;
-	height: 280px;
-}
-
-/* ------------------图片轮播-------------------- */
-.frame_content_top_left {
-	float: left;
-	width: 552px;
-	height: 280px;
-	display: block;
-	background-color: rosybrown;
-	position: relative;
-	overflow: hidden;
-	/* border-radius: 10px; */
-}
-
-/* 规定了图片大小 */
-.wrap img {
-	max-width: 552px;
-	/* height: 280px; */
-	height: auto;
-}
-
-
-.frame_content_top_left ul {
-	position: absolute;
-}
-
-.frame_content_top_left ul li {
-	height: 100%;
-	width: 100%;
-}
-
-.frame_content_top_left ol {
-	position: absolute;
-	right: 5px;
-	bottom: 10px;
-}
-
-.frame_content_top_left ol li {
-	height: 20px;
-	width: 20px;
-	background: #ccc;
-	border: solid 1px #666;
-	margin-left: 5px;
-	color: #000;
-	float: left;
-	line-height: center;
 	text-align: center;
-	cursor: pointer;
 }
-
-.frame_content_top_left ol .on {
-	background: #E97305;
-	color: #fff;
+.frame_content_video_neirong_bottom_footer_label{
+	text-align:center;
 }
 
 
@@ -233,348 +101,76 @@ body {
 
 
 
-.frame_content_top_rt {
-	display: inline-block;
-	width: 255px;
-	height: 130px;
-	padding: 5px;
-	/* margin:0; */
-	/* padding: 0; */
-	background-color: white;
-	border-bottom: 1px solid rgb(255, 130, 0);
-	border-radius: 10px;
-	margin-left: 5px;
-	overflow: hidden;
-}
 
-.frame_content_top_rt_name {
-	padding: 10px;
-}
+@media only screen and (max-width:700px){.nav{display:none}
+.nav_center li{float:none;display:none}
+.frame{max-width:380px;height:auto;margin:2px}
+.frame_right{display:none}
+.frame_content_top_left{width:auto;height:150px}
+.frame_content_top{width:auto;max-height:150px}
+.slide{height:150px}
+.item{height:150px}
+.frame_content_top_rt{display:none}
+.frame_content_top_rb{display:none}
+.item img{width:100%;height:auto}
+.carousel-inner{height:150px}
+.frame_content{width:auto;margin:auto}
+.frame_content_label{width:340px}
+.frame_right{display:none}
+.frame_content_video_neirong{width:auto}
+.frame_content_neirong{width:auto;height:170px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}
+.frame_content_neirong_img img{max-height:110px}
+.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}
+.frame_content_neirong_right_content{width:350px;font-size:9px}
+.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid rgb(235,235,235);overflow:hidden}
+.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}
+.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}
+.frame_content_video_neirong_bottom{padding:10px;padding-left:20px;padding-right:20px;padding-bottom:20px}
+.frame_content_video_neirong_title_touxiang{width:40px;height:40px;float:left}
+.frame_content_video_neirong_shipin video{max-width:100%;height:auto}
+.frame_content_video_neirong_shipin{max-width:710px;height:auto;margin:0 auto;padding-left:20px;padding-top:0;padding-right:20px;padding-top:10px}
+.frame_content_video_neirong_title_content{padding-left:10px;height:auto;overflow:hidden;max-width:700px;font-size:1.0em}
+.frame_content_video_neirong_title_name{height:40px;max-width:742px;padding-left:40px;font-size:0.7em}
+}@media screen and (min-width:1024px) and (max-width:1366px){.frame_content_video_neirong_shipin{width:600px;padding-left:50px}
+.frame_right{width:260px;margin:0;margin-top:25px}
+.frame_right_update{width:260px}
+.frame_right_update_top{width:260px}
+.frame_right_update_title{width:260px}
+.frame_content{width:720px}
+.frame_content_top{width:710px}
+.frame_content_top_left{width:500px}
+.frame_content_top_rt{width:195px}
+.frame_content_top_rt_ct{width:190px;padding:0;padding-left:5px;height:auto}
+.frame_content_top_rb{width:195px}
+.nav_left{width:20%}
+.nav_center{width:60%}
+.nav_right{width:20%}
+.frame_content_neirong{width:720px}
+.frame_content_neirong_right_content{width:470px}
+.frame_content_neirong_right_head{width:470px}
+.frame_content_neirong_right_footer{width:470px}
 
-.frame_content_top_rt_ct {
-	padding: 10px;
-	height: 60px;
-	width: 235px;
-	overflow: hidden;
-}
-
-.frame_content_top_rb {
-	float: left;
-	width: 255px;
-	height: 130px;
-	padding: 5px;
-	background-color: white;
-	border-radius: 10px;
-	margin-left: 5px;
-	overflow: hidden;
-}
-
-/* 最新文章 */
-.frame_content_label {
-	padding: 20px 10px 10px 0px;
-	font-size: 14px;
-	border-bottom: 2px solid rgb(255, 130, 0);
-
-}
-
-/* 内容部分 */
-.frame_content_neirong {
-	width: 810px;
-	height: 197px;
-	padding: 20px 0px 20px 0px;
-	border-bottom: 2px solid rgb(235, 235, 235);
-	margin-top: 20px;
-	background-color: rgb(245, 245, 245);
-}
-
-.frame_content_neirong:hover {
-	box-shadow: 0px 0px 2px rgb(191, 171, 134);
-}
-
-.frame_content_neirong_img:hover {
-	/* 选择改变的地方 */
-	transition-property: all;
-	/* 持续时间 */
-	transition-duration: 2s;
-	/* 改变速度 */
-	transition-timing-function: linear;
-}
-
-.frame_content_neirong_img{
-	width: 220px;
-	max-height:190px;
-	float: left;
-	overflow:hidden;
-}
-/* 视频 */
-.frame_content_neirong_img video{
-	width: 100%;
-	height: auto;
-	padding-top:40px;
-	padding-bottom:30px;
-	
-}
-/* 内容图片 */
-.frame_content_neirong_img img {
-	max-width:100%;
-	height: auto;
-	padding-top:20px;
-	padding-bottom:20px;
-	float: left;
-	overflow: hidden;
-}
-
-/* 内容 */
-.frame_content_neirong_right_head {
-	float: left;
-	margin-left: 20px;
-	width: 570px;
-	border-bottom: 2px solid rgb(191, 171, 134);
-	overflow: hidden;
-	height: 34px;
-	margin-bottom: 10px;
-}
-
-.frame_content_neirong_right_content {
-	width: 570px;
-	height: 85px;
-	float: left;
-	padding-left: 20px;
-	overflow: hidden;
-	font-size: 18px;
-}
-
-.frame_content_neirong_right_footer {
-	width: 570px;
-	height: 40px;
-	float: left;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
-
-/* 框架右边部分 */
-.frame_right {
-	height: 650px;
-	width: 255px;
-	background-color: white;
-	float: left;
-	padding: 10px;
-	position: sticky;
-	top: 50px;
-	margin-top: 25px;
-	border: 0px solid rgb(245, 245, 245);
-	border-radius: 5px;
-	margin-left: 20px;
-}
-.frame_right_update{
-	width: 255px;
-	height: 100%;
-	overflow: hidden;
-}
-.frame_right_update_top{
-	width: 255px;
-	height: 650px;
-	overflow: hidden;
-}
-.frame_right_update_title{
-	height: 40px;
-	width: 255px;
-	overflow: hidden;
-	border-bottom: 1px solid rgb(245, 245, 245);
-}
-.frame_right_update_title_left{
-	width: 127px;
-	overflow: hidden;
-	float:left;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-.frame_right_update_title_right{
-	width: 127px;
-	overflow: hidden;
-	text-align:right;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-.frame_right_update_content{
-	width: auto;
-	overflow: hidden;
-	border-bottom: 1px solid rgb(245, 245, 245);
-	float: left;
-}
-.frame_right_update_content_left{
-	width:220px;
-	overflow: hidden;
-	text-align:left;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	float: left;
-}
-.frame_right_update_content_right{
-	width: auto;
-	overflow: hidden;
-	text-align: right;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	float: left;
-}
-.frame_right_update_content_right_right{
-	 width:auto;
-	 font-size: 15px;
-	 overflow: hidden;
-	border-radius:0px;
-	color: rgb(255,255,255);
-}
-.color1{
-	background-color: rgb(255,56,82);
-}
-.color{
-	background-color:rgb(51,175,221);
-}
-
-/* 视频页面 */
-	.frame_content_video_neirong {
-		max-width:812px;
-		height: auto;
-		padding: 10px 0 10px 0;
-		margin-top: 10px;
-		margin-bottom: 5px;
-		border-bottom: 2px solid rgb(235, 235, 235);
-	}
-	.frame_content_video_neirong_title{
-		max-width:812px;
-		height:110px;
-		padding:10px ;
-		padding-right:85px;
-		padding-left:0px;
-		padding-bottom: 10px;
-	}
-	.frame_content_video_neirong_title_name{
-		height: 40px;
-		max-width: 812px;
-		border-bottom:2px  solid rgb(191, 171, 134);
-	}
-	.frame_content_video_neirong_title_content{
-		padding:10px;
-		height:60px;
-		max-width: 812px;
-		font-size: 18px;
-		
-	}
-	.frame_content_video_neirong_shipin{
-		max-width:650px;
-		height:auto;
-		margin: 0 auto;
-		padding-left:80px;
-		padding-right:80px;
-		padding-top: 10px;
-		/* overflow: hidden; */
-	}
-	.frame_content_video_neirong_shipin video{
-		max-width: 100%;
-		height: auto;
-	}
-	.frame_content_video_neirong_bottom{
-		max-width:812px;
-		height:60px;
-		padding:20px ;
-		padding-right:85px;
-		padding-left:85px;
-	}
-  
-/* 适配小米10s及一下 */
-@media screen and (min-width:360px) and (max-width:780px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:340px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{max-height: 110px;}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid rgb(235, 235, 235) ;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
-/* 适配部分/iphone12手机及以下*/
-@media screen and (min-width:390px) and (max-width:844px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:340px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{max-height: 110px;}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solid rgb(235, 235, 235) ;overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
-/* 适配iphone5/SE 及以下*/
-@media screen and (min-width:320px) and (max-width:568px) {
-	.nav {
-		display: none
-	}
-
-	.nav_center li {
-		float: none;
-		display: none
-	}
-
-	.frame_right {
-		display: none
-	}
-
-	.frame_content_top {
-		display: none
-	}
-
-	.frame_content_label {
-		width: 340px
-	}
-
-	.frame {
-		width: 300px;
-		height: auto
-	}
-
-	.frame_right {
-		display: none
-	}
-/* 内容主页面框架 */
-	.frame_content_neirong {
-		width: 300px;
-		height: 160px;
-		padding: 5px 0 5px 0;
-		margin-top: 10px;
-		margin-bottom: 5px
-	}
-
-	.frame_content {
-		width: 300px;
-		padding: 0;
-		margin: 0 auto;
-		overflow: hidden
-	}
-
-	.frame_content_neirong_img img {
-		max-height: 110px;
-	}
-
-	.frame_content_neirong_img {
-		padding-top: 15px;
-		width: 120px;
-		height: 110px;
-		float: left
-	}
-
-	.frame_content_neirong_right_content {
-		width: 350px;
-		font-size: 9px
-	}
-
-	.frame_content_neirong_right_head {
-		float: left;
-		width: 160px;
-		border-bottom: 2px solid rgb(235, 235, 235);
-		overflow: hidden
-	}
-
-	.frame_content_neirong_right_content {
-		width: 160px;
-		height: 82px;
-		float: left;
-		overflow: hidden;
-		font-size: 14px
-	}
-
-	.frame_content_neirong_right_footer {
-		width: 300px;
-		height: 20px;
-		float: left;
-		padding-left: 0;
-		padding-top: 10px;
-		padding-bottom: 0;
-		padding-right: 0;
-		overflow: hidden
-	}
-}
-/* 适配nest hub */
-@media screen and (min-width:600px) and (max-width:1024px){.nav{display:none}.nav_center li{float:none;display:none}.frame_right{display:none}.frame_content_top{display:none}.frame_content_label{width:300px}.frame{width:300px;height:auto}.frame_right{display:none}.frame_content_neirong{width:300px;height:160px;padding:5px 0 5px 0;margin-top:10px;margin-bottom:5px}.frame_content{width:300px;padding:0;margin:0 auto;overflow:hidden}.frame_content_neirong_img img{max-height: 110px;}.frame_content_neirong_img{padding-top:15px;width:120px;height:110px;float:left}.frame_content_neirong_right_content{width:350px;font-size:9px}.frame_content_neirong_right_head{float:left;width:160px;border-bottom:2px solidr rgb(235, 235, 235); overflow:hidden}.frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}.frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}}
+@media screen and (min-width:2000){.nav_left{width:10%}
+.nav_center{width:80%}
+.nav_right{width:10%}
+}@media screen and (min-width:768px) and (max-width:1024px){.nav_left{width:10%}
+.nav_center{width:80%}
+.nav_right{width:10%}
+.frame_content_video_neirong_shipin{width:400px;padding-left:50px}
+.frame_right{width:230px;margin:0;margin-top:25px}
+.frame_right_update{width:230px；}
+.frame_right_update_top{width:230px}
+.frame_right_update_title{width:70px}
+.frame_right_update_content_left{width:200px}
+.frame_right_update_title_right{width:50px}
+.frame_content{width:500px}
+.frame_content_top{width:500px}
+.frame_content_top_left{width:300px}
+.frame_content_top_rt{width:180px}
+.frame_content_top_rt_ct{width:180px;padding:0;padding-left:5px;height:auto}
+.frame_content_top_rb{width:180px}
+.frame_content_neirong{width:500px}
+.frame_content_neirong_right_content{width:260px}
+.frame_content_neirong_right_head{width:260px}
+.frame_content_neirong_right_footer{width:260px}
+}} 

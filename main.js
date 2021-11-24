@@ -6,35 +6,59 @@ document.oncontextmenu = function(){
     }
     
     //轮播 
-    window.onload=(function(){
-        // 初始化轮播
-        $(".start-slide").click(function(){
-            $("#myCarousel").carousel('cycle');
-        });
-        // 停止轮播
-        $(".pause-slide").click(function(){
-            $("#myCarousel").carousel('pause');
-        });
-        // 循环轮播到上一个项目
-        $(".prev-slide").click(function(){
-            $("#myCarousel").carousel('prev');
-        });
-        // 循环轮播到下一个项目
-        $(".next-slide").click(function(){
-            $("#myCarousel").carousel('next');
-        });
-        // 循环轮播到某个特定的帧 
-        $(".slide-one").click(function(){
-            $("#myCarousel").carousel(0);
-        });
-        $(".slide-two").click(function(){
-            $("#myCarousel").carousel(1);
-        });
-        $(".slide-three").click(function(){
-            $("#myCarousel").carousel(2);
-        });
-    });
+	$(function(){
+		// 初始化轮播
+		window.onload=(function(){
+			$("#myCarousel").carousel('cycle');
+		});
 
+	});
+
+        
+
+
+
+// 评论
+
+    $("#dropdownMenu1").ready(function () {
+        var pinglune = true;
+        $(".pinglun").click(function () {
+            if (pinglune) {
+                $("#home").show();
+                pinglune = false;
+            } else {
+                $("#home").hide();
+               pinglune = true;
+            }
+        });
+    },
+    );
+
+
+
+
+
+
+    //点赞
+
+
+    $(document).ready(function () {
+        var buttonon = true;
+        var clickshu = 1;
+        $(".dianzann").click(function () {
+            if (buttonon) {
+                $(".feng").fadeIn("slow");
+                $(".dianzan").hide("slow");
+                buttonon = false;
+            } else {
+                $(".dianzan").fadeIn("slow");
+                $(".feng").hide("slow");
+                buttonon = true;
+            }
+        });
+    },
+    );
+    
 
 // js图片轮播
 

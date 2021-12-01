@@ -1,3 +1,31 @@
+<?php 
+
+include "backphp/config.inc.php";
+
+  date_default_timezone_set("PRC");
+
+
+$mysqli = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+$mysqli -> set_charset(DB_CHARSET);
+   if ($mysqli -> connect_error) {
+
+        die("连接错误：".$mysqli -> connect_error);
+
+   }
+
+// 查询每日更新
+$updatesql ="select *  from updatenews  ";
+  $result = $mysqli -> query($updatesql);
+ while ($row = $result -> fetch_assoc()) {
+    $rows[] = $row;   //$rows中保存user表中所有记录
+      }
+   
+
+//每日音乐
+include "backphp/music.php";
+   
+   
+   ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -49,7 +77,13 @@
     <div class="logo">
         <h2>记录日常以及学习生活 <br />__________</h2>
     </div>
-
+    <div class="container">
+        <div class="row"> <?php foreach ($rowmusic as $row) { ?> </div>
+        <div class="col-md-12" style="text-align: center;">
+            <div class="row"><?php echo $row["歌曲名"]."——".$row["作者"];?></div>
+            <div class="row"> <audio src="<?php echo $row["src"];?> <?php }?>" controls></audio></div>
+        </div>
+    </div>
     <!-- 正文开始 -->
     <div class="container">
         <div class="row">
@@ -120,8 +154,8 @@
                             <div class="frame_content_video_neirong_title">
                                 <div class="meirong_header">
                                     <div class="row">
-                                        <div class="col-md-1" style="width:100px">1</div>
-                                        <div class="col-md-8" style="font-size: 10px;">
+                                        <div class="col-md-2 touxiang"><img src="img/1.jpg" style="border-radius:50%; overflow:hidden;"></div>
+                                        <div class="col-md-8 nameinformation" style="font-size: 10px;">
                                             <div class="col-md-12">小强的一生</div>
                                             <div class="col-md-12"><small>2021/11/24</small></div>
                                         </div>
@@ -129,11 +163,12 @@
                                                 class="close" aria-hidden="true">&times;</button></div>
                                     </div>
                                 </div>
-                                <div class="frame_content_video_neirong_title_name">
-                                    <!-- <h2>狙击之王</h2> -->
-                                </div>
-                                <div class="frame_content_video_neirong_title_content">
-                                    不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！z不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！
+                                <div class="container frame_content_video_neirong_title_content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！z不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -146,30 +181,13 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+                            <!-- 评论及点赞部分 -->
                             <div class="container frame_content_video_neirong_bottom">
                                 <div class="row  frame_content_video_neirong_bottom_footer_label">
-                                    <!--<div class="col-md-4">-->
-                                    <!--    <div class="dropdown">-->
-                                    <!--        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">-->
-                                    <!--            转发-->
-                                    <!--            <span class="caret"></span>-->
-                                    <!--        </button>-->
-                                    <!--        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">-->
-                                    <!--            <li role="presentation" class="dropdown-header">下拉菜单标题</li>-->
-                                    <!--            <li role="presentation">-->
-                                    <!--                <a role="menuitem" tabindex="-1" href="#">还没开发完毕</a>-->
-                                    <!--            </li>-->
-                                    <!--            <li role="presentation">-->
-                                    <!--                <a role="menuitem" tabindex="-1" href="#">还没开发完毕</a>-->
-                                    <!--            </li>-->
-                                    <!--            <li role="presentation">-->
-                                    <!--                <a role="menuitem" tabindex="-1" href="#">-->
-                                    <!--                    还没开发完毕-->
-                                    <!--                </a>-->
-                                    <!--            </li>-->
-                                    <!--        </ul>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
 
                                     <div class="col-md-6">
                                         <div class="dropdown">
@@ -245,8 +263,8 @@
 
 
                                         <div class="dropdown">
-                                            <button type="button" class="btn dropdown-toggle fengfeng" id="dropdownMenu1"
-                                                data-toggle="dropdown tab" style="cursor: pointer;">
+                                            <button type="button" class="btn dropdown-toggle fengfeng"
+                                                id="dropdownMenu1" data-toggle="dropdown tab" style="cursor: pointer;">
                                                 <a href="#home" data-toggle="tab" class="pinglun"> 评论</a>
                                                 <svg t="1637661780177" class="icon" viewBox="0 0 1024 1024"
                                                     version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1198"
@@ -267,36 +285,20 @@
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
-
 
                                 <!-- 评论区功能 -->
-                                <div id="myTabContent" class="tab-content">
-                                    <div class="tab-pane fade in active" id="home" style="display:none;">
-                                        <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。
-                                        </p>
+                                <div id="myTabContent" class="row tab-content">
+                                    <div class="col-md-12 tab-pane fade in active" id="home" style="display:none;">
+                                    <form action="">
+                                        <span class="col-md-1">1</span>
+                                        <span class="col-md-11"><textarea name="" id="" cols="35" rows="5"placeholder="发布你的内容"></textarea></span>
+                                          <span class=col-md-12><button>as</button></span>   
+                                          </form>   
                                     </div>
 
 
                                 </div>
-
-                                <!-- <script type="text/javascript">
-                                    $(document).ready(function () {
-                                        var pinglune = true;
-                                        $(".pinglun").click(function () {
-                                            if (pinglune) {
-                                                $("#home").show();
-                                                pinglune = false;
-                                            } else {
-                                                $("#home").hide();
-                                               pinglune = true;
-                                            }
-                                        });
-                                    },
-                                    );
-                                </script> -->
-
                             </div>
                         </div>
                     </div>
@@ -309,275 +311,36 @@
                             <div class="frame_right_update_top">
 
                                 <div class="frame_right_update_title">
-                                    <div class="frame_right_update_title_left">更新日记</div>
-                                    <div class="frame_right_update_title_right">2021/11/24<br></div>
+                                    <div class="frame_right_update_title_left"><?php
+                                        foreach ($rows as $row) {if (in_array("今日更新", $row)){echo $row["title"];}}?>
+                                    </div>
+                                    <div class="frame_right_update_title_right"><?php
+                                        foreach ($rows as $row) {echo $row["title"];}?><br></div>
                                 </div>
-                                <div class="frame_right_update_content_left">#界面优化</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color1">完成</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#修复了轮播不轮播的功能</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color1">完成</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#js在ios中不生效的坑爹事件</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color2">不会</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#添加了点赞评论功能</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color1">完成</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#修复了已知的小bug</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color1">完成</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#添加页脚</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color1">完成</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#超出字数省略功能</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color">准备</div>
-                                </div>
-                                <div class="frame_right_update_content_left"> #移动端的导航功能</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color">准备</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#移动端的js更新日记功能</div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color">准备</div>
-                                </div>
-                                <div class="frame_right_update_content_left">#响应式布局不知道是不是没学好找不到这个布局总是不对称到底为啥多出来一点
-                                </div>
-                                <div class="frame_right_update_content_right">
-                                    <div class="frame_right_update_content_right_right color2">不会</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="frame_right_update_bottom">
+                                <?php foreach ($rows as $row){ ?>
+                                <div class="frame_right_update_content_left"><?php echo $row["content"];?></div>
 
+
+                                <div class="frame_right_update_content_right">
+                                    <div class="frame_right_update_content_right_right"><?php 
+                                    
+                                        if (in_array("不会", $row))
+                                        {
+                                            echo '<span class="color1">'.$row["statue"].'</span>';
+                                        }
+                                        else if(in_array("完成", $row)) {
+                                            echo '<span class="color2">'.$row["statue"].'</span>';
+                                        }
+                                        
+                                        ?>
+                                    </div>
+                                </div>
+                                <?php }?>
+
+                            </div>
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- <div class="frame_right">
-    <div class="frame_right_update">
-        <div class="frame_right_update_top">
-
-            <div class="frame_right_update_title">
-                <div class="frame_right_update_title_left">更新日记</div>
-                <div class="frame_right_update_title_right">2021/11/23<br></div>
-            </div>
-
-
-            <div class="frame_right_update_content_left">#修复了已知的小bug</div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color1">完成</div>
-            </div>
-            <div class="frame_right_update_content_left">#超出字数省略功能</div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color">准备</div>
-            </div>
-            <div class="frame_right_update_content_left">#添加页脚</div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color1">完成</div>
-            </div>
-            <div class="frame_right_update_content_left"> #移动端的导航功能</div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color">准备</div>
-            </div>
-            <div class="frame_right_update_content_left">#移动端的js更新日记功能</div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color">准备</div>
-            </div>
-            <div class="frame_right_update_content_left">#响应式布局不知道是不是没学好找不到这个布局总是不对称到底为啥多出来一点
-            </div>
-            <div class="frame_right_update_content_right">
-                <div class="frame_right_update_content_right_right color2">不会</div>
-            </div>
-        </div>
-    </div>
-    <div class="frame_right_update_bottom">
-
-    </div>
-</div> -->
-
-
-                    <!-- <div class="frame_right">
-                        <div class="frame_right_update">
-                            <div class="frame_right_update_top">
-
-                                <div class="frame_right_update_title">
-                                    <div class="frame_right_update_title_left">更新日记</div>
-                                    <div class="frame_right_update_title_right">2021/11/22<br></div>
-                                </div>
-
-                                <div class="frame_right_update_content">
-                                    <div class="frame_right_update_content_left">#界面优化适配</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#添加视频模块</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#难以兼容ios不加载video标签</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color2">不会</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#修复了已知的小bug</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#超出字数省略功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#添加页脚</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left"> #移动端的导航功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#移动端的js更新日记功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#响应式布局不知道是不是没学好找不到这个布局总是不对称到底为啥多出来一点
-                                    </div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color2">不会</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="frame_right_update_bottom">
-
-                            </div>
-                        </div>
-                    </div> -->
-
-
-
-
-                    <!-- 
-
-                    <div class="frame_right">
-                        <div class="frame_right_update">
-                            <div class="frame_right_update_top">
-
-                                <div class="frame_right_update_title">
-                                    <div class="frame_right_update_title_left">更新日记</div>
-                                    <div class="frame_right_update_title_right">2021/11/21<br></div>
-                                </div>
-
-                                <div class="frame_right_update_content">
-                                    <div class="frame_right_update_content_left">#适配了部分手机分辨率</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#界面优化</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#勉强兼容ios不加载video标签</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#修复了已知的小bug</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#超出字数省略功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#添加页脚</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left"> #移动端的导航功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#移动端的js更新日记功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="frame_right_update_bottom">
-
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                    <!-- 
-                    <div class="frame_right">
-                        <div class="frame_right_update">
-                            <div class="frame_right_update_top">
-                    
-                                <div class="frame_right_update_title">
-                                    <div class="frame_right_update_title_left">更新日记</div>
-                                    <div class="frame_right_update_title_right">2021/11/20<br></div>
-                                </div>
-                    
-                                <div class="frame_right_update_content">
-                                    <div class="frame_right_update_content_left">#适配了部分手机分辨率</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#新增更新日记板块</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#勉强兼容ios不加载video标签</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#修复了已知的小bug</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color1">完成</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#超出字数省略功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#添加页脚</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left"> #移动端的导航功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                    <div class="frame_right_update_content_left">#移动端的js更新日记功能</div>
-                                    <div class="frame_right_update_content_right">
-                                        <div class="frame_right_update_content_right_right color">准备</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="frame_right_update_bottom">
-                    
-                            </div>
-                        </div>
-                    </div> -->
 
 
                 </div>

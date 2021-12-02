@@ -57,9 +57,14 @@ include "backphp/music.php";
 
 <body>
     <!-- 导航 -->
-    <div class="nav">
+    <div class=" container nav">
+    <div class="row">
+        <div class="col-md-2">
         <div class="nav_left"></div>
+        </div>
+        <div class="col-md-8" >
         <div class="nav_center">
+            
             <ul>
                 <li><a href="#" class="active1">首页</a></li>
                 <li><a href="#">个人随笔</a></li>
@@ -70,12 +75,22 @@ include "backphp/music.php";
                 <li><a href="#">关于我</a></li>
             </ul>
         </div>
+    </div>
+   <div class="col-md-2">
         <div class="nav_right">1</div>
+        </div>
+        </div>
+            </div>
     </div>
     <!-- 导航结束 -->
     <!-- logo -->
-    <div class="logo">
+    <div class="container logo">
+        <div class="row">
+            <div class="col-md-12">
+        
         <h2>记录日常以及学习生活 <br />__________</h2>
+        </div>
+        </div>
     </div>
     <div class="container">
         <div class="row"> <?php foreach ($rowmusic as $row) { ?> </div>

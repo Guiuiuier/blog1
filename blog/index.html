@@ -20,7 +20,8 @@ $updatesql ="select *  from updatenews  ";
     $rows[] = $row;   //$rows中保存user表中所有记录
       }
    
-
+// 每日更新的时间
+include "backphp/datetime.php";
 //每日音乐
 include "backphp/music.php";
    
@@ -62,28 +63,30 @@ include "backphp/music.php";
             </div>
             <div class="col-md-8 nav_center">
                 <nav class="navbar navbar-default nav_margin" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle nav_anniu" data-toggle="collapse"
-                            data-target="#example-navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!-- <a class="navbar-brand" href="#">菜鸟教程</a> -->
-                    </div>
-                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                        <ul class="nav navbar-nav ">
-                            <li class="active"><a href="#">首页</a></li>
-                            <li><a href="#">个人随笔</a></li>
-                            <li><a href="#">首页</a></li>
-                            <li><a href="#">个人随笔</a></li>
-                            <li><a href="#">首页</a></li>
-                            <li><a href="#">个人随笔</a></li>
-                            <li><a href="#">个人随笔</a></li>
-                        </ul>
-                    </div>
-                    <div>
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle nav_anniu" data-toggle="collapse"
+                                data-target="#example-navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="row phone_name">
+                                <div class="col-md-6" style="font-size:20px">好好学习</div>
+                            </div>
+                            <!-- <a class="navbar-brand" href="#">菜鸟教程</a> -->
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                            <ul class="nav navbar-nav ">
+                                <li class="active"><a href="#">首页</a></li>
+                                <li><a href="#">个人随笔</a></li>
+                                <li><a href="#">技术分享</a></li>
+                                <li><a href="#">说点什么</a></li>
+                                <li><a href="#">心情说说</a></li>
+                                <li><a href="#">关于我</a></li>
+                            </ul>
+                        </div>
+                        <div>
                 </nav>
             </div>
         </div>
@@ -163,9 +166,9 @@ include "backphp/music.php";
                                 <div class="frame_content_top_rt_name">
                                     <h3>说点什么</h3>
                                 </div>
-                                <div class="frame_content_top_rt_ct">希望能找个好工作</div>
+                                <div class="frame_content_top_rt_ct"id="">希望能找个好工作</div>
                             </div>
-                            <div class="frame_content_top_rb">S之border边框长度控制
+                            <div class="frame_content_top_rb" id="">S之border边框长度控制
                                 需要边框长度比容器小一些时,用div嵌套,但伪类在实现这个效果时很方便,只需要一个div就够了,另外调整padding和margin都不会很麻烦。 ...
                             </div>
                         </div>
@@ -199,9 +202,7 @@ include "backphp/music.php";
                                 </div>
                                 <div class="container frame_content_video_neirong_title_content">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！z不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！
-                                        </div>
+                                        <div class="col-md-12 word">不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！z不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！</div>
                                     </div>
                                 </div>
 
@@ -219,6 +220,40 @@ include "backphp/music.php";
 
 
 
+
+
+                            <div class="frame_content_video_neirong_title">
+                                <div class="meirong_header">
+                                    <div class="row">
+                                        <div class="col-md-2 touxiang"><img src="img/1.jpg"
+                                                style="border-radius:50%; overflow:hidden;"></div>
+                                        <div class="col-md-6 nameinformation" style="font-size: 10px;">
+                                            <div class="col-md-12 yonghu_name">小强的一生</div>
+                                            <div class="col-md-12 yonghu_shijian"><small>2021/11/24</small>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-2" style="text-align:right"> <button type="button"
+                                                class="close" aria-hidden="true">&times;</button></div> -->
+                                    </div>
+                                </div>
+                                <div class="container frame_content_video_neirong_title_content">
+                                    <div class="row">
+                                        <div class="col-md-12 word"id="">啥功能都没有的模板</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="contaner frame_content_video_neirong_shipin">
+                                <div class="row">
+                                    <div class="col-md-12 zhaopian">
+                                       <img src="img/6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
                             <!-- 评论及点赞部分 -->
                             <div class="container frame_content_video_neirong_bottom">
                                 <div class="row  frame_content_video_neirong_bottom_footer_label">
@@ -229,7 +264,6 @@ include "backphp/music.php";
                                                 id="dropdownMenu1" data-toggle="dropdown">
                                                 点赞
                                                 <span class="sss">
-                                                    <!-- <img src="img/zan.png" alt="" class="feng"style="display: none;"> -->
                                                     <span class="feng" style="display: none;"><svg t="1637760630584"
                                                             class="icon" viewBox="0 0 1024 1024" version="1.1"
                                                             xmlns="http://www.w3.org/2000/svg" p-id="2325" width="16"
@@ -265,25 +299,6 @@ include "backphp/music.php";
                                                     </svg>
                                                 </span>
                                             </button>
-
-                                            <!-- <script type="text/javascript">
-                                                $(document).ready(function () {
-                                                    var buttonon = true;
-                                                    var clickshu = 1;
-                                                    $(".dianzann").click(function () {
-                                                        if (buttonon) {
-                                                            $(".feng").fadeIn("slow");
-                                                            $(".dianzan").hide("slow");
-                                                            buttonon = false;
-                                                        } else {
-                                                            $(".dianzan").fadeIn("slow");
-                                                            $(".feng").hide("slow");
-                                                            buttonon = true;
-                                                        }
-                                                    });
-                                                },
-                                                );
-                                            </script> -->
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -321,7 +336,7 @@ include "backphp/music.php";
                                     </div>
                                 </div>
 
-                                <!-- 评论区功能 -->
+                                 <!--评论区功能 -->
                                 <div id="myTabContent" class="row tab-content">
                                     <div class="col-md-12 tab-pane fade in active" id="home" style="display:none;">
                                         <form action="">
@@ -335,6 +350,43 @@ include "backphp/music.php";
 
                                 </div>
                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </div>
 
@@ -347,10 +399,11 @@ include "backphp/music.php";
 
                                 <div class="frame_right_update_title">
                                     <div class="frame_right_update_title_left"><?php
-                                        foreach ($rows as $row) {if (in_array("今日更新", $row)){echo $row["title"];}}?>
+                                       foreach ($rows as $row){if(in_array("今日更新", $row)){echo $row["title"];}}?>
+                                        
                                     </div>
                                     <div class="frame_right_update_title_right"><?php
-                                        foreach ($rows as $row) {echo $row["title"];}?><br></div>
+                                        foreach ($rowstime as $row) {echo $row["date"];}?><br></div>
                                 </div>
                                 <?php foreach ($rows as $row){ ?>
                                 <div class="frame_right_update_content_left"><?php echo $row["content"];?></div>
@@ -366,7 +419,12 @@ include "backphp/music.php";
                                         else if(in_array("完成", $row)) {
                                             echo '<span class="color2">'.$row["statue"].'</span>';
                                         }
-                                        
+                                        else if(in_array("结束", $row)) {
+                                            echo '<span class="color3">'.$row["statue"].'</span>';
+                                        }
+                                        else{
+                                            echo '<span class="color4">'.$row["statue"].'</span>';
+                                        }
                                         ?>
                                     </div>
                                 </div>
@@ -387,7 +445,7 @@ include "backphp/music.php";
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                <span>&copy 2021 by fengshanggui All Rights Reserved.</span>
+                    <span>&copy 2021 by fengshanggui All Rights Reserved.</span>
                     <span class="beian"><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021163222号</a></span>
                 </div>
             </div>
@@ -397,16 +455,3 @@ include "backphp/music.php";
 </body>
 
 </html>
-<!-- js轮播太丑放弃 -->
-<!-- <div class="wrap" id='wrap'>
-    <ul id="pic">
-        <li><img src="img/1.jpg" alt="1" /></li>
-        <li> <img src="img/2.png" alt="2" class="img2" /></li>
-        <li><img src="img/4.jpg" alt="3" class="img3" /></li>
-    </ul>
-    <ol id="list">
-        <li class="on">1</li>
-        <li>2</li>
-        <li>3</li>
-    </ol>
-</div> -->

@@ -1,129 +1,91 @@
 body,h1,h2,h3,li,a,ul{margin:0px;padding:0px;text-decoration:none;list-style:none;color:#666666}
 *{margin:0;padding:0;word-wrap:break-word}
-
-/* font: "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif; */
 body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-position:top center;background-attachment:fixed;background-size:cover;-webkit-background-size:100% 100%;background-size:100% 100%;position:relative;z-index:9999;font:15px/1.5}
-.nav{height:46px;background-color:white;margin:0 auto;padding:0;position:fixed;top:0;text-align:center;width:100%;z-index:2}
-.nav_left{width:20%;float:left;height:50px}
-.nav_center{width:60%;float:left;height:50px}
-.nav_center ul{list-style-type:none;margin:0 auto;padding:0;overflow:hidden;background-color:white;text-align:center;max-width:1122px;display:inline-block}
-.nav_center li{float:left}
-.nav_center a:hover{
-	text-decoration: none;
-}
-.nav_center a:hover:not(.active1){background-color:rgb(245,245,245)}
-.nav_center a{text-decoration: none;  display:block;padding:13px;color:#666666}
+.nav_margin{margin:0;background-color:#f5f5f5;border-color:#f5f5f5;height:auto;border:0}
+.nav_anniu{float:left}
+.nav_length{width:100%;text-align:center}
 .active1{background-color:rgb(255,130,0)}
-.nav_right{width:20%;float:left;height:50px}
-.logo{width:100%;margin-top:47px;   height:200px;background-color:rgb(29,167,218);background-size:100%;opacity:0.9;overflow:hidden;position:relative;z-index:1;box-shadow:10px 10px 50px rgb(29,167,218);text-align:center}
+.logo{width:100%;height:200px;background-color:rgb(29,167,218);background-size:100%;opacity:0.9;overflow:hidden;position:relative;z-index:1;box-shadow:10px 10px 50px rgb(29,167,218);text-align:center}
 .logo h2{font-weight:bold;color:white;font-size:28px;padding:60px}
 .frame{max-width:1122px;height:2200px;margin:0 auto;margin-top:2px}
 .frame_left_h{padding:10px 16px;margin:0 auto}
 .frame_left_h h2{color:rgb(51,51,51)}
-.frame_content{max-width:822px;margin-top:20px;float:left;width:relative;z-index:1}
+.frame_content{margin-top:20px;float:left;max-width:822px;position:relative;z-index:1}
 .frame_content_top{max-width:820px;height:280px}
 .slide{max-width:540px;max-height:280px}
 .carousel-inner{max-width:100%;height:auto}
 .item{max-width:100%;height:280px}
 .item img{max-width:100%;height:auto}
 .frame_content_top_left{float:left;max-width:552px;height:280px}
-.meirong_header{
-	height:auto;
-}
-/* ------------------js图片轮播-------------------- */
-/* .frame_content_top_left{float:left;width:552px;height:280px;display:block;background-color:rosybrown;position:relative;overflow:hidden}
- .wrap img{max-width:552px;height:auto}
-.frame_content_top_left ul{position:absolute}
-.frame_content_top_left ul li{height:100%;width:100%}
-.frame_content_top_left ol{position:absolute;right:5px;bottom:10px}
-.frame_content_top_left ol li{height:20px;width:20px;background:#ccc;border:solid 1px #666;margin-left:5px;color:#000;float:left;line-height:center;text-align:center;cursor:pointer}
-.frame_content_top_left ol .on{background:#E97305;color:#fff}
- */
-
- .frame_content_top_rt{display:inline-block;width:255px;height:140px;padding:5px;background-color:white;border-bottom:1px solid rgb(255,130,0);border-radius:10px;margin-left:5px;overflow:hidden}
- .frame_content_top_rt_name{padding:5px}
- .frame_content_top_rt_name h3{font-size: 17px;}
- .frame_content_top_rt_ct{padding:10px;height:60px;width:235px;overflow:hidden}
- .frame_content_top_rb{float:left;width:255px;height:140px;padding:5px;background-color:white;border-radius:10px;margin-left:5px;overflow:hidden}
- .frame_content_label{padding:20px 10px 10px 0px;border-bottom:2px solid rgb(255,130,0)}
- .frame_content_label h2{font-size: 17px;}
- .frame_content_neirong{width:810px;height:197px;padding:20px 0px 20px 0px;border-bottom:2px solid rgb(235,235,235);margin-top:20px;background-color:rgb(245,245,245)}
- .frame_content_neirong:hover{box-shadow:0px 0px 2px rgb(191,171,134)}
- .frame_content_neirong_img:hover{transition-property:all;transition-duration:2s;transition-timing-function:linear}
- .frame_content_neirong_img{width:220px;max-height:190px;float:left;overflow:hidden}
- .frame_content_neirong_img video{width:100%;height:auto;padding-top:40px;padding-bottom:30px}
- .frame_content_neirong_img img{max-width:100%;height:auto;padding-top:20px;padding-bottom:20px;float:left;overflow:hidden}
- .frame_content_neirong_right_head{float:left;margin-left:20px;width:570px;border-bottom:2px solid rgb(191,171,134);overflow:hidden;height:34px;margin-bottom:10px}
- .frame_content_neirong_right_content{width:570px;height:85px;float:left;padding-left:20px;overflow:hidden;font-size:18px}
- .frame_content_neirong_right_footer{width:570px;height:40px;float:left;padding-left:20px;padding-top:20px;padding-bottom:10px}
- .frame_right{height:650px;width:280px;background-color:white;float:left;padding:10px;position:sticky;top:50px;margin-top:25px;border:0px solid rgb(245,245,245);border-radius:5px;margin-left:20px}
- .frame_right_update{width:255px;height:100%;overflow:hidden;padding:2px}
- .frame_right_update_top{width:257px;height:650px;overflow:hidden}
- .frame_right_update_title{height:40px;width:255px;overflow:hidden;border-bottom:1px solid rgb(245,245,245)}
- .frame_right_update_title_left{width:127px;overflow:hidden;float:left;padding-top:8px;padding-bottom:8px}
- .frame_right_update_title_right{width:127px;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
- .frame_right_update_content{width:auto;overflow:hidden;border-bottom:1px solid rgb(245,245,245);float:left}
- .frame_right_update_content_left{width:220px;overflow:hidden;text-align:left;padding-top:8px;padding-bottom:8px;float:left}
- .frame_right_update_content_right{width:auto;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
- .frame_right_update_content_right_right{width:auto;font-size:15px;overflow:hidden;border-radius:0px;color:rgb(255,255,255)}
- .color1{background-color:rgb(255,56,82)}
- .color2{background-color:rgb(255,130,0)}
- .color3{background-color:rgb(51,175,221)}
- .frame_content_video_neirong{width:auto;height:auto;padding:10px 0 10px 0;margin-top:10px;margin-bottom:5px;border:2px solid rgb(235,235,235);background-color:rgb(255,255,255);border-radius:10px}
- .frame_content_video_neirong_title{max-width:812px;height:auto;padding:10px;padding-left:10px;padding-bottom:10px}
- /* .frame_content_video_neirong_title_touxiang{width:70px;height:60px;float:left} */
- /* .frame_content_video_neirong_title_name{height:40px;max-width:742px;padding-left:70px;font-size:1.0em} */
- .frame_content_video_neirong_title_content{padding-left:70px;height:auto;max-width:742px;font-size:1.0em}
- .frame_content_video_neirong_shipin{max-width:600px;max-height:auto;margin:0 auto;/*padding-left:65px;padding-top:10px*/}
- .frame_content_video_neirong_shipin video{max-width:100%;height:auto}
- .frame_content_video_neirong_bottom{max-width:710px;height:auto;padding-right:5.6rem;padding-left:85px}
- .dropdown-toggle{background-color: white;width: 100%;}
-.shiping{text-align: center;}
- .icon{
-display: inline-block;
-padding-top:5px;
-}
- .dropdown{
-	border-left: 2px solid rgb(245,245,245); 
-	border-right: 2px solid rgb(245,245,245); 
- }
-.footer{
-	background-color: black;
-	color: white;
-	text-align: center;
-}
-.frame_content_video_neirong_bottom_footer_label{
-	text-align:center;
+.meirong_header{height:auto}
+.chakangengduo{
+    background-color:white;color: rgb(29,167,218); border:none;
 }
 
-
-.nameinformation{
-	padding-left: 0px;
-	padding-right: 0;
-}
-.touxiang{
-	max-width: 100px;
-	text-align: center;
-	/* margin-left: 10px; */
-	padding:0;
-}
-.touxiang img{
-	/* width: 100%; */
-max-height:50px;
-}
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width:700px){.nav{display:none}
-.nav_center li{float:none;display:none}
-.frame{max-width:380px;height:auto;margin:2px}
+.beian a{color:white;text-decoration:none}
+.phone_name{display:none}
+.zhaopian img{width:100%;margin:0 auto}
+.frame_content_top_rt{display:inline-block;width:265px;height:140px;padding:5px;background-color:white;border-bottom:1px solid rgb(255,130,0);border-radius:10px;margin-left:5px;overflow:hidden}
+.frame_content_top_rt_name{padding:5px}
+.frame_content_top_rt_name h3{font-size:17px}
+.frame_content_top_rt_ct{padding:10px;height:60px;width:235px;overflow:hidden}
+.frame_content_top_rb{float:left;width:265px;height:140px;padding:5px;background-color:white;border-radius:10px;margin-left:5px;overflow:hidden}
+.frame_content_label{padding:20px 10px 10px 0px;border-bottom:2px solid rgb(255,130,0)}
+.frame_content_label h2{font-size:17px}
+.frame_content_neirong{width:810px;height:197px;padding:20px 0px 20px 0px;border-bottom:2px solid rgb(235,235,235);margin-top:20px;background-color:rgb(245,245,245)}
+.frame_content_neirong:hover{box-shadow:0px 0px 2px rgb(191,171,134)}
+.frame_content_neirong_img:hover{transition-property:all;transition-duration:2s;transition-timing-function:linear}
+.frame_content_neirong_img{width:220px;max-height:190px;float:left;overflow:hidden}
+.frame_content_neirong_img video{width:100%;height:auto;padding-top:40px;padding-bottom:30px}
+.frame_content_neirong_img img{max-width:100%;height:auto;padding-top:20px;padding-bottom:20px;float:left;overflow:hidden}
+.frame_content_neirong_right_head{float:left;margin-left:20px;width:570px;border-bottom:2px solid rgb(191,171,134);overflow:hidden;height:34px;margin-bottom:10px}
+.frame_content_neirong_right_content{width:570px;height:85px;float:left;padding-left:20px;overflow:hidden;font-size:18px}
+.frame_content_neirong_right_footer{width:570px;height:40px;float:left;padding-left:20px;padding-top:20px;padding-bottom:10px}
+.frame_right{height:650px;width:280px;background-color:white;float:left;padding:10px;position:sticky;top:0px;margin-top:25px;border:0px solid rgb(245,245,245);border-radius:5px;margin-left:20px}
+.frame_right_update{width:255px;height:100%;overflow:hidden;padding:2px}
+.frame_right_update_top{width:257px;height:650px;overflow:hidden}
+.frame_right_update_title{height:40px;width:255px;overflow:hidden;border-bottom:1px solid rgb(245,245,245)}
+.frame_right_update_title_left{width:127px;overflow:hidden;float:left;padding-top:8px;padding-bottom:8px}
+.frame_right_update_title_right{width:127px;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
+.frame_right_update_content{width:auto;overflow:hidden;border-bottom:1px solid rgb(245,245,245);float:left}
+.frame_right_update_content_left{width:220px;overflow:hidden;text-align:left;padding-top:8px;padding-bottom:8px;float:left}
+.frame_right_update_content_right{width:auto;overflow:hidden;text-align:right;padding-top:8px;padding-bottom:8px;float:left}
+.frame_right_update_content_right_right{width:auto;font-size:15px;overflow:hidden;border-radius:0px;color:rgb(255,255,255)}
+.color1{background-color:rgb(255,56,82)}
+.color2{background-color:rgb(255,130,0)}
+.color3{background-color:rgb(51,175,221)}
+.color4{background-color:rgb(99, 165, 69)}
+.frame_content_video_neirong{width:auto;height:auto;padding:10px 0 10px 0;margin-top:10px;margin-bottom:5px;border:2px solid rgb(235,235,235);background-color:rgb(255,255,255);border-radius:10px}
+.frame_content_video_neirong_title{max-width:812px;height:auto;padding:10px;padding-left:10px;padding-bottom:10px}
+.frame_content_video_neirong_title_content{padding-left:70px;height:auto;max-width:742px;font-size:1.0em}
+.frame_content_video_neirong_shipin{max-width:600px;max-height:auto;margin:0 auto}
+.frame_content_video_neirong_shipin video{max-width:100%;height:auto}
+.frame_content_video_neirong_bottom{max-width:710px;height:auto;padding-right:5.6rem;padding-left:85px}
+.dropdown-toggle{background-color:white;width:100%}
+.shiping{text-align:center}
+.icon{display:inline-block;padding-bottom:4px;}
+.dropdown{border-left:2px solid rgb(245,245,245);border-right:2px solid rgb(245,245,245)}
+.footer{background-color:black;color:white;text-align:center}
+.frame_content_video_neirong_bottom_footer_label{text-align:center}
+.nameinformation{padding-left:0px;padding-right:0}
+.touxiang{max-width:100px;text-align:center;margin-left:10px;padding:0}
+.touxiang img{height:50px;width:50px;}
+.container-fluid{max-width:600px;margin:0 auto}
+@media (min-width:768px){.navbar-header{float:left}
+}.navbar-collapse{overflow-x:visible;padding-right:15px;padding-left:15px;border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);-webkit-overflow-scrolling:touch}
+.navbar-collapse.in{overflow-y:auto}
+@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;box-shadow:none}
+.navbar-collapse.collapse{display:block!important;height:auto !important;padding-bottom:0;overflow:visible !important}
+.navbar-collapse.in{overflow-y:visible}
+.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{padding-left:0;padding-right:0}
+}.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}
+@media only screen and (max-width:768px){.logo{margin-top:0;height:150px}
+.nav_left{display:none}
+.logo h2{font-size:20px}
+.phone_name{display:inline-table;line-height:20px;padding-right:55px;padding-top:15px;padding-bottom:10px}
+.nav_right{display:none}
+.nav_left{display:none}
+.frame{max-width:1122px;height:auto;margin:2px}
 .frame_right{display:none}
 .frame_content_top_left{width:auto;height:150px}
 .frame_content_top{width:auto;max-height:150px}
@@ -145,56 +107,14 @@ max-height:50px;
 .frame_content_neirong_right_content{width:160px;height:82px;float:left;overflow:hidden;font-size:14px}
 .frame_content_neirong_right_footer{width:300px;height:20px;float:left;padding-left:0;padding-top:10px;padding-bottom:0;padding-right:0;overflow:hidden}
 .frame_content_video_neirong_bottom{padding:10px;padding-left:20px;padding-right:20px;padding-bottom:20px}
-/* .frame_content_video_neirong_title_touxiang{width:40px;height:40px;float:left} */
 .frame_content_video_neirong_shipin video{max-width:100%;height:auto}
 .frame_content_video_neirong_shipin{max-width:710px;height:auto;margin:0 auto;padding-left:20px;padding-top:0;padding-right:20px;padding-top:10px}
 .frame_content_video_neirong_title_content{padding-left:10px;height:auto;overflow:hidden;max-width:700px;font-size:1.0em}
+.touxiang{float:left}
+.nameinformation{float:left;height:50px}
 }
-/* .frame_content_video_neirong_title_name{height:40px;max-width:742px;padding-left:40px;font-size:0.7em} */
-@media only screen and (min-width:700px) and (max-width:844px){
-	.frame_right{display: none;}
-	.slide{max-width:450px;}
-}
-
-@media screen and (min-width:768px) and (max-width:1024px){
-.nav_left{width:10%}
-.nav_center{width:80%}
-.nav_right{width:10%}
-.frame_content_video_neirong_shipin{width:400px;padding-left:50px}
-.frame_right{width:230px;margin:0;margin-top:25px}
-.frame_right_update{width:230px;}
-.frame_right_update_top{width:230px}
-.frame_right_update_title{width:70px}
-.frame_right_update_content_left{width:200px}
-.frame_right_update_title_right{width:50px}
-.frame_content{width:500px}
-.frame_content_top{width:500px}
-.frame_content_top_left{width:300px}
-.frame_content_top_rt{width:180px}
-.frame_content_top_rt_ct{width:180px;padding:0;padding-left:5px;height:auto}
-.frame_content_top_rb{width:180px}
-.frame_content_neirong{width:500px}
-.frame_content_neirong_right_content{width:260px}
-.frame_content_neirong_right_head{width:260px}
-.frame_content_neirong_right_footer{width:260px}
-}
-@media screen and (min-width:1024px) and (max-width:1366px){
-.frame_content_video_neirong_shipin{width:600px;padding-left:50px}
-.frame_right{width:280px;margin:0;margin-top:25px}
-.frame_right_update{width:260px}
-.frame_right_update_top{width:260px}
-.frame_right_update_title{width:260px}
-.frame_content{width:720px}
-.frame_content_top{width:710px}
-.frame_content_top_left{width:500px}
-.frame_content_top_rt{width:195px}
-.frame_content_top_rt_ct{width:190px;padding:0;padding-left:5px;height:auto}
-.frame_content_top_rb{width:195px}
-.nav_left{width:20%}
-.nav_center{width:60%}
-.nav_right{width:20%}
-.frame_content_neirong{width:720px}
-.frame_content_neirong_right_content{width:470px}
-.frame_content_neirong_right_head{width:470px}
-.frame_content_neirong_right_footer{width:470px}
+@media only screen and (min-width:1024px) and (max-width:1366px){
+    .frame_right{
+        display: none;
+    }
 }

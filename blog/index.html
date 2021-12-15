@@ -41,7 +41,7 @@ include "backphp/music.php";
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/main.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>好好生活,好好努力</title>
+    <title>NoBug's blog</title>
     <script language="javascript" type="text/javascript">
         oncontextmenu = "return false"
     </script>
@@ -92,7 +92,7 @@ include "backphp/music.php";
         <div class="row">
             <div class="col-md-12">
 
-                <h2>记录日常以及学习生活 <br />__________</h2>
+                <h2>不知道写什么,先放着。<br />________</h2>
             </div>
         </div>
     </div>
@@ -144,10 +144,9 @@ include "backphp/music.php";
                                 <div class="frame_content_top_rt_name">
                                     <h3>说点什么</h3>
                                 </div>
-                                <div class="frame_content_top_rt_ct" id="">希望能找个好工作</div>
+                                <div class="frame_content_top_rt_ct" id="">想找个实习，好好学习一下才行啊。</div>
                             </div>
-                            <div class="frame_content_top_rb" id="">S之border边框长度控制
-                                需要边框长度比容器小一些时,用div嵌套,但伪类在实现这个效果时很方便,只需要一个div就够了,另外调整padding和margin都不会很麻烦。 ...
+                            <div class="frame_content_top_rb" id="">不知道写些什么先放着。
                             </div>
                         </div>
                         <div></div>
@@ -158,12 +157,13 @@ include "backphp/music.php";
                         </div>
                         <!-- 视频 -->
                         <div class="container frame_content_video_neirong">
-                            <?php foreach ($rowmusic as $row) { ?>
-                            <div class="col-md-12" style="text-align: center;">
-                                <div class="row"><?php echo $row["歌曲名"]."——".$row["作者"];?></div>
-                                <div class="row"> <audio src="<?php echo $row["src"];?> <?php }?>" controls></audio>
-                                </div>
-                            </div>
+                            <!--<?php foreach ($rowmusic as $row) { ?>-->
+                            <!--<div class="col-md-12" style="text-align: center;">-->
+                            <!--    <div class="row"><?php echo $row["歌曲名"]."——".$row["作者"];?></div>-->
+                            <!--    <div class="row"> <audio src="<?php echo $row["src"];?> <?php }?>" controls></audio>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <div class="frame_content_frame">
                             <div class="frame_content_video_neirong_title">
                                 <div class="meirong_header">
                                     <div class="row">
@@ -194,12 +194,38 @@ include "backphp/music.php";
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="frame_content_frame">
+                            <div class="frame_content_video_neirong_title">
+                                <div class="meirong_header">
+                                    <div class="row">
+                                        <div class="col-md-2 touxiang"><img src="img/1.jpg"
+                                                style="border-radius:50%; overflow:hidden;"></div>
+                                        <div class="col-md-6 nameinformation" style="font-size: 10px;">
+                                            <div class="col-md-12 yonghu_name">小强的一生</div>
+                                            <div class="col-md-12 yonghu_shijian"><small>2021/11/24</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container frame_content_video_neirong_title_content">
+                                    <div class="row">
+                                        <div class="col-md-12 word">
+                                            林语堂说，一个心地干净、思路清晰、没有多余情绪和妄念的人，是会带给人安全感的。因为他不伤人，也不自伤。不制造麻烦，也不麻烦别人。某种程度上来说，这是一种持戒
+                                            我感觉，那种温柔的男生是清冽的。为什么要用这个词来形容呢？我感觉那种男生就是一杯茶、一杯酒，酝酿许久，沉淀许久，你呆在他的身边，会觉得无比安心。也许他不会什么甜言蜜语，但是当你看向他的时候，他的眼底都是你。他会很细心，那种细心是不经意间流露出的，而不是套路，他很暖，但有时候也会很冷。他太温柔啦，他一定会藏起自己的孤独和悲伤，将最仅有的，温柔的光照在你的身上。温柔的人是清冽的，或者说，他是清醒的。他或许经历过常人想不到的孤单或悲伤，但是他依然坚强的存活了下来。那样的经历没有让他变成极端的人，反之，他是温柔的。因为他们把孤独和悲伤留给了自己，并尽力将仅存的温暖投向这个可能伤害过他们世界
+                                            这样的人，怎能不温柔？谁又会不喜欢呢？
+                                            他们有自己的底线与坚持。知道自己适合哪样的人，喜欢怎样的人
+                                            他们不是来者不拒，亦不是随遇而安的
+                                            他们有清醒的认知，知道自己的要坚守的东西，以及自己要到达的目的地
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
 
-
-
-
+                        <div class="frame_content_frame">
                             <div class="frame_content_video_neirong_title">
                                 <div class="meirong_header">
                                     <div class="row">
@@ -242,8 +268,8 @@ include "backphp/music.php";
                                                 id="dropdownMenu1" data-toggle="dropdown">
                                                 点赞
                                                 <span class="sss">
-                                                    <span class="feng" style="display: none;"><img src="img/zan.png" class="icon"
-                                                            alt=""></span>
+                                                    <span class="feng" style="display: none;"><img src="img/zan.png"
+                                                            class="icon" alt=""></span>
                                                     <img src="img/zan1.png" class="icon dianzan" alt="">
                                                 </span>
                                             </button>
@@ -269,13 +295,13 @@ include "backphp/music.php";
                                     <div class="col-md-12 tab-pane fade in active" id="home" style="display:none;">
                                         <form action="">
                                             <span class="col-md-1">1</span>
-                                            <span class="col-md-11"><textarea name="" id="" cols="35" rows="5"
-                                                    placeholder="发布你的内容"></textarea></span>
-                                            <span class=col-md-12><button>as</button></span>
+                                            <span class="col-md-11">互动和点赞都先取消了，审核不太合格啊，超范围</span>
+                                            <!-- <span class=col-md-12><button></button></span> -->
                                         </form>
                                     </div>
 
 
+                                </div>
                                 </div>
                             </div>
 
@@ -336,7 +362,17 @@ include "backphp/music.php";
             <div class="row">
                 <div class="col-md-12">
                     <span>&copy 2021 by fengshanggui All Rights Reserved.</span>
-                    <span class="beian"><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021163222号</a></span>
+                    <p class="beian"><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021163222号</a></p>
+                    <span style="width:300px;margin:0 auto; padding:20px 0;">
+                        <a target="_blank"
+                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030602006443"
+                            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                                src="img/beian.png" style="float:left;" />
+                            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                                粤公网安备 44030602006443号</p>
+                        </a>
+                    </span>
+
                 </div>
             </div>
         </div>

@@ -24,7 +24,8 @@ $updatesql ="select *  from updatenews  ";
 include "backphp/datetime.php";
 //每日音乐
 include "backphp/music.php";
-   
+//说说
+include "backphp/shuoshuo.php";
    
    ?>
 <!DOCTYPE html>
@@ -163,39 +164,10 @@ include "backphp/music.php";
                             <!--    <div class="row"> <audio src="<?php echo $row["src"];?> <?php }?>" controls></audio>-->
                             <!--    </div>-->
                             <!--</div>-->
-                            <div class="frame_content_frame">
-                            <div class="frame_content_video_neirong_title">
-                                <div class="meirong_header">
-                                    <div class="row">
-                                        <div class="col-md-2 touxiang"><img src="img/1.jpg"
-                                                style="border-radius:50%; overflow:hidden;"></div>
-                                        <div class="col-md-6 nameinformation" style="font-size: 10px;">
-                                            <div class="col-md-12 yonghu_name">小强的一生</div>
-                                            <div class="col-md-12 yonghu_shijian"><small>2021/11/24</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container frame_content_video_neirong_title_content">
-                                    <div class="row">
-                                        <div class="col-md-12 word">
-                                            不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！z不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！不要轻易触碰老实人的底线,舞台上，他无惧battle；生活里，他火力全“开”！
-                                        </div>
-                                    </div>
-                                </div>
+                           
+         
 
-                            </div>
-                            <div class="contaner frame_content_video_neirong_shipin">
-                                <div class="row">
-                                    <div class="col-md-12 shiping">
-                                        <video controls>
-                                            <source src="video/1.mp4" type="video/mp4" />
-                                        </video>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php foreach ($shuoshuo as $row){ ?>
                         <div class="frame_content_frame">
                             <div class="frame_content_video_neirong_title">
                                 <div class="meirong_header">
@@ -204,7 +176,7 @@ include "backphp/music.php";
                                                 style="border-radius:50%; overflow:hidden;"></div>
                                         <div class="col-md-6 nameinformation" style="font-size: 10px;">
                                             <div class="col-md-12 yonghu_name">小强的一生</div>
-                                            <div class="col-md-12 yonghu_shijian"><small>2021/11/24</small>
+                                            <div class="col-md-12 yonghu_shijian"><?php echo $row['date'];?></small>
                                             </div>
                                         </div>
                                     </div>
@@ -212,19 +184,14 @@ include "backphp/music.php";
                                 <div class="container frame_content_video_neirong_title_content">
                                     <div class="row">
                                         <div class="col-md-12 word">
-                                            林语堂说，一个心地干净、思路清晰、没有多余情绪和妄念的人，是会带给人安全感的。因为他不伤人，也不自伤。不制造麻烦，也不麻烦别人。某种程度上来说，这是一种持戒
-                                            我感觉，那种温柔的男生是清冽的。为什么要用这个词来形容呢？我感觉那种男生就是一杯茶、一杯酒，酝酿许久，沉淀许久，你呆在他的身边，会觉得无比安心。也许他不会什么甜言蜜语，但是当你看向他的时候，他的眼底都是你。他会很细心，那种细心是不经意间流露出的，而不是套路，他很暖，但有时候也会很冷。他太温柔啦，他一定会藏起自己的孤独和悲伤，将最仅有的，温柔的光照在你的身上。温柔的人是清冽的，或者说，他是清醒的。他或许经历过常人想不到的孤单或悲伤，但是他依然坚强的存活了下来。那样的经历没有让他变成极端的人，反之，他是温柔的。因为他们把孤独和悲伤留给了自己，并尽力将仅存的温暖投向这个可能伤害过他们世界
-                                            这样的人，怎能不温柔？谁又会不喜欢呢？
-                                            他们有自己的底线与坚持。知道自己适合哪样的人，喜欢怎样的人
-                                            他们不是来者不拒，亦不是随遇而安的
-                                            他们有清醒的认知，知道自己的要坚守的东西，以及自己要到达的目的地
+                                        <?php echo $row['content'];?>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-
+                        <?php }?>
                         <div class="frame_content_frame">
                             <div class="frame_content_video_neirong_title">
                                 <div class="meirong_header">
@@ -304,8 +271,40 @@ include "backphp/music.php";
                                 </div>
                                 </div>
                             </div>
+                            <div class="frame_content_frame">
+                            <div class="frame_content_video_neirong_title">
+                                <div class="meirong_header">
+                                    <div class="row">
+                                        <div class="col-md-2 touxiang"><img src="img/1.jpg"
+                                                style="border-radius:50%; overflow:hidden;"></div>
+                                        <div class="col-md-6 nameinformation" style="font-size: 10px;">
+                                            <div class="col-md-12 yonghu_name">小强的一生</div>
+                                            <div class="col-md-12 yonghu_shijian"><small>2021/11/14</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container frame_content_video_neirong_title_content">
+                                    <div class="row">
+                                        <div class="col-md-12 word">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="contaner frame_content_video_neirong_shipin">
+                                <div class="row">
+                                    <div class="col-md-12 shiping">
+                                        <video controls>
+                                            <source src="video/1.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        </div>
+
                     </div>
 
 

@@ -21,7 +21,10 @@ body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-posi
 .chakangengduo{
     background-color:white;color: rgb(29,167,218); border:none;
 }
-
+.frame_content_frame{
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(245,245,245);
+}
 .beian a{color:white;text-decoration:none}
 .phone_name{display:none}
 .zhaopian img{width:100%;margin:0 auto}
@@ -80,6 +83,13 @@ body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-posi
 .navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{padding-left:0;padding-right:0}
 }.navbar-fixed-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{max-height:340px}
 @media only screen and (max-width:768px){.logo{margin-top:0;height:150px}
+.touxiang img{
+    width: 40px;
+    height: 40px;
+}
+.frame_content{
+    float: none;
+}
 .nav_left{display:none}
 .logo h2{font-size:20px}
 .phone_name{display:inline-table;line-height:20px;padding-right:55px;padding-top:15px;padding-bottom:10px}
@@ -116,5 +126,20 @@ body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-posi
 @media only screen and (min-width:1024px) and (max-width:1366px){
     .frame_right{
         display: none;
+    }
+    .frame_content{
+        max-width: 1122px;
+    }
+    .frame_content_top{
+        max-width:1122px;
+    }
+    .frame_content_top_left{
+        max-width: 640px;
+    }
+    .frame_content_top_rt{
+        width: 282px;
+    }
+    .frame_content_top_rb{
+        width:282px;
     }
 }

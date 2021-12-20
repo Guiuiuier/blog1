@@ -123,6 +123,25 @@ body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-posi
 .touxiang{float:left}
 .nameinformation{float:left;height:50px}
 }
+@media only screen and (min-width:768px)and (max-width:992px){
+    .frame_content_top_rt{display: none;}
+    .frame_content_top_rb{display: none;}
+    .frame_right{
+        display: none;
+    }
+.touxiang{
+    float: left;
+    max-width: 100px;
+    text-align: center;
+    margin-left: 30px;
+    padding: 0;
+    
+}
+.nameinformation{
+    margin-left: 100px;
+}
+
+}
 @media only screen and (min-width:1024px) and (max-width:1366px){
     .frame_right{
         display: none;

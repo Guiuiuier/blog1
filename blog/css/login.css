@@ -1,9 +1,0 @@
-
-body,h1,h2,h3,li,a,ul{margin:0px;padding:0px;text-decoration:none;list-style:none;color:#666666}
-*{margin:0;padding:0;word-wrap:break-word}
-/* font: "Microsoft YaHei", Lato, Tahoma, Helvetica, Arial, '宋体', sans-serif; */
-body{background-color:rgb(245,245,245);margin:0 auto;padding:0px;background-position:top center;background-attachment:fixed;background-size:cover;-webkit-background-size:100% 100%;background-size:100% 100%;position:relative;z-index:9999;font:15px/1.5}
-
-.content{
-  text-align: center;
-}

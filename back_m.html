@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .name{
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div> 每日更新
+        <form  action="backphp/back_m.php" method="POST">
+            <p>时间<input name="time" type="text" id="shijian" value="" /></p>
+            <p>内容<input name="content" type="text" value="" /></p>
+            <p>状态<input name="statue" type="text" value="" /></p>
+            <p><input type="submit" value="提交">
+        </form>
+    </div>
+
+<div>每日音乐
+   <form action="backphp/uploadmusic.php" method="POST" enctype="multipart/form-data">
+   <p>作者<input name="author" type="text" value="" required="true"/></p>
+   <p>歌曲名<input name="music_name" type="text"  value="" required="true"/></p>
+   <p>上传文件<input name="uploadfile" type="file"  value="" /></p>
+   <p><input type="submit" value="提交">
+</form>
+</div>
+
+<div>每日动态</div>
+<form action="backphp/uploadshuo.php" method="POST" enctype="multipart/form-data">
+    <p>作者<input name="name" type="text" value="Guier" required="true"/></p>
+    <p>时间<input name="time" type="text" id="shuoshuowenzi" value="" /></p>
+    <p><textarea name="content" type="text"  value=""  rows="10" cols="120"></textarea></p>
+    <p>上传文件<input name="uploadfile" type="file"  value="" /></p>
+    <p><input type="submit" value="提交">
+</form>
+    <script>
+        var d = new Date(); var date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate() + "";
+        document.getElementById("shijian").value = date;
+        document.getElementById("shuoshuowenzi").value = date;
+    </script>
+</body>
+
+</html>
